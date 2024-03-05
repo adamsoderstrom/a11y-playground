@@ -25,7 +25,20 @@ const _2 = () => {
       </div>
 
       <div className="max-w-2xl flex flex-col gap-4">
-        {/** Your solution goes here. */}
+        <p className="text-2xl">Abbreviations</p>
+        <p>
+          An <span className="font-bold">abbreviation</span> (from Latin{' '}
+          <i>brevis</i>, meaning{' '}
+          <i>short</i>) is a shortened form of a word
+          or phrase, by any method.
+        </p>
+        <p>
+          An <span className="font-bold">initialism</span> is an abbreviation
+          pronounced by spelling out each letter, i.e.{' '}
+          <abbr className="italic">FBI</abbr>,{' '}
+          <abbr className="italic">USA</abbr>,{' '}
+          <abbr className="italic">BRB</abbr>.
+        </p>
       </div>
     </View>
   );
