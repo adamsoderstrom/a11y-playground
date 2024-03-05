@@ -26,9 +26,25 @@ const _4 = () => {
         </div>
       </div>
 
-      <div className="max-w-2xl flex flex-col gap-4">
-        {/** Your solution goes here. */}
-      </div>
+      <figure className="max-w-2xl flex flex-col gap-4">
+        <div className="space-y-4 bg-gray-800 rounded-lg p-4">
+          <img
+            src="/jelly.jpg"
+            className="object-cover max-w-md aspect-[4/3] rounded-md"
+            alt="Spotted jellies swimming in a Tokyo aquarium"
+          />
+          <figcaption>
+            <a
+              href="https://en.wikipedia.org/wiki/Jellyfish"
+              className="underline"
+              target="_blank"
+            >
+              Spotted jellies
+            </a>{' '}
+            swimming in a Tokyo aquarium
+          </figcaption>
+        </div>
+      </figure>
     </View>
   );
 };
