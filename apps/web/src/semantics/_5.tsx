@@ -1,7 +1,7 @@
 import { View } from 'ui';
 
 const classes =
-  'px-2 hover:after:bg-blue-500 after:absolute after:-bottom-0.5 after:h-0.5 after:start-0 after:w-full after:content-[""] relative py-2 text-gray-300 hover:text-white';
+  'block px-2 hover:after:bg-blue-500 after:absolute after:-bottom-0.5 after:h-0.5 after:start-0 after:w-full after:content-[""] relative py-2 text-gray-300 hover:text-white';
 
 const _5 = () => {
   return (
@@ -21,10 +21,18 @@ const _5 = () => {
         </div>
       </div>
 
-      <div className="max-w-2xl flex flex-col gap-4">
-        {/** Your solution goes here. */}
+      <div>
+        <nav className="max-w-2xl flex flex-col gap-4">
+          <ul className="flex border-2 rounded-lg border-gray-400 gap-4 px-4 items-center">
+            <li><a href="#" aria-current="page" className={classes}>Facebook</a></li>
+            <li><a href="#" className={classes}>Amazon</a></li>
+            <li><a href="#" className={classes}>Apple</a></li>
+            <li><a href="#" className={classes}>Netflix</a></li>
+            <li><a href="#" className={classes}>Google</a></li>
+          </ul>
+        </nav>
       </div>
-    </View>
+    </View >
   );
 };
 
