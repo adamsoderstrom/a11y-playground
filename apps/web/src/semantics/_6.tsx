@@ -51,7 +51,53 @@ const _6 = () => {
       </div>
 
       <div className="max-w-2xl flex flex-col gap-4">
-        {/** Your solution goes here. */}
+        <table>
+          <tbody>
+            {contents.map((row, index, rows) => {
+              return (
+                <tr
+                  key={index}
+                  className={tw(
+                    cellStyles,
+                    index === 0 && 'font-bold bg-gray-800',
+                    index > 0 && index < rows.length - 1 && 'text-center',
+                    index === rows.length - 1 && 'text-center bg-gray-800 text-xs'
+                  )}
+                >
+                  {row.map((cell, jIndex, cells) => {
+                    let CellComponent: 'th' | 'td' = jIndex === 0 ? 'th' : 'td'
+                    const CellComponentProps = jIndex === 0 ? {
+                      scope: 'row',
+                    } : {}
+
+                    if (index === 0 && jIndex !== 0) {
+                      CellComponentProps.scope = 'col'
+                    }
+
+                    if (index === 0) {
+                      CellComponent = 'th'
+                    }
+
+                    return (
+                      <CellComponent
+                        {...CellComponentProps}
+                        key={jIndex}
+                        className={tw(
+                          cellStyles,
+                          jIndex === 0 && 'font-bold bg-gray-800 text-start',
+                          jIndex > 0 && jIndex < cells.length - 1 && 'text-center',
+                          jIndex === cells.length - 1 && 'text-center'
+                        )}
+                      >
+                        {cell}
+                      </CellComponent>
+                    )
+                  })}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
       </div>
     </View>
   );
