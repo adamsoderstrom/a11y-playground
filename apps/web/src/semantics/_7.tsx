@@ -44,8 +44,43 @@ const _7 = () => {
         </div>
       </div>
 
-      <div className="max-w-2xl flex flex-col gap-2 text-center">
-        {/** Your solution goes here. */}
+      <div className="max-w-2xl w-full flex flex-col gap-2 text-center">
+        <div className={tw(box, 'flex-col gap-2 flex-1 border-gray-600')}>
+          <aside className={tw(box, 'border-blue-300')}>Message box</aside>
+          <header className={tw(box, 'border-blue-300')}>Header</header>
+          <nav className={tw(box, 'border-purple-300')}>Navigation</nav>
+          <nav aria-label="Breadcrumb" className={tw(box, 'border-purple-300')}>Breadcrumbs</nav>
+          <main className={tw(box, 'flex-col gap-2')}>
+            Content
+            <div className="grid grid-cols-4 w-full gap-2">
+              <aside className={tw(box, 'col-span-1 border-red-300')}>
+                Google Adsense
+              </aside>
+              <div
+                className={tw(box, 'flex-col gap-2 col-span-3 border-red-300')}
+              >
+                Blocks
+                <section className={tw(box, 'border-yellow-300')}>Product</section>
+
+                <section className={tw(box, 'border-yellow-300')}>USP's</section>
+
+                <section className={tw(box, 'border-yellow-300')}>
+                  Product Reviews
+                </section>
+
+                <aside className={tw(box, 'border-yellow-300')}>
+                  Related Products
+                </aside>
+
+                <section className={tw(box, 'border-yellow-300')}>SEO Text</section>
+              </div>
+            </div>
+          </main>
+
+          <aside className={tw(box, 'border-purple-300')}>Newsletter</aside>
+
+          <footer className={tw(box, 'border-blue-300')}>Footer</footer>
+        </div>
       </div>
     </View>
   );
